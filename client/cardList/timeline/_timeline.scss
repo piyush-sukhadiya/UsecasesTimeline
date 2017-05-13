@@ -1,0 +1,14 @@
+.md-dialog-container {
+    md-dialog {
+        width: 60%;
+    }
+}
+
+@media (max-width: 600px) {
+    .md-dialog-container {
+        md-dialog {
+            max-width: 95%;
+            width: 95%;
+        }
+    }
+}

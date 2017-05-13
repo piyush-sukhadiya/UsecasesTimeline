@@ -1,0 +1,22 @@
+<md-content class="md-padding new-usecase" flex layout="column" layout-align="center">
+    <form name="$ctrl.newCaseForm">
+        <md-input-container flex-gt-xs="60" flex-xs="100" class="md-block">
+            <label>Title</label>
+            <input type="text" ng-model="$ctrl.newCase.title" name="title" required>
+            <div ng-messages="$ctrl.newCaseForm.title.$error">
+                <ng-message when="required">Title is required.</ng-message>
+            </div>
+        </md-input-container>
+        <md-input-container flex-gt-xs="60" flex-xs="100" class="md-block">
+            <label>Body</label>
+            <textarea ng-model="$ctrl.newCase.body" name="body" rows="2" max-rows="5" required></textarea>
+            <div ng-messages="$ctrl.newCaseForm.body.$error">
+                <div ng-message="required">Body is required.</div>
+            </div>
+        </md-input-container>
+        <section layout="row" layout-align="end" flex-gt-xs="60" flex-xs="100" class="md-block">
+            <md-button class="md-raised" ui-sref="cardlist">Cancel</md-button>
+            <md-button class="md-raised md-primary" ng-disabled="$ctrl.newCaseForm.$invalid" ng-click="$ctrl.saveNewCase()">Save</md-button>
+        </section>
+    </form>
+</md-content>
