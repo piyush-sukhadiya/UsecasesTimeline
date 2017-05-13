@@ -23,7 +23,10 @@ import './app.scss';
 angular.module('usecasesTimeline', ['ngMaterial', 'ngMessages', 'ngSanitize',
         uiRouter, Main, CardList, NewCase
     ])
-    .config(routeConfig);
+    .config(routeConfig)
+    .run(function($rootScope, $state) {
+        $rootScope.$state = $state;
+    });
 
 // Bootstrap Application
 angular.element(document)

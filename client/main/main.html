@@ -1,5 +1,8 @@
-<md-toolbar layout="row" class="md-toolbar-tools" layout-align="end center">
-    <md-button class="md-raised" ui-sref="cardlist">Use cases</md-button>
-    <md-button class="md-raised" ui-sref="new"><strong>+</strong> Add New</md-button>
+<md-toolbar layout="row" class="md-toolbar-tools">
+    <div class="title">Motius - Usecases</div>
+    <div layout-align="end center">
+        <md-button class="md-raised" ui-sref="cardlist" ng-class="{'active' : $root.$state.includes('cardlist')}">Use cases</md-button>
+        <md-button class="md-raised" ui-sref="new" ng-class="{'active' : $root.$state.includes('new')}"><strong>+</strong> Add New</md-button>
+    </div>
 </md-toolbar>
 <div ui-view=""></div>

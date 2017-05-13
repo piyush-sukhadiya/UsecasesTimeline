@@ -1,5 +1,25 @@
 main {
-    md-toolbar .md-button {
+    .title {
+        flex: 1;
+    }
+    md-toolbar .md-button.md-raised {
         text-transform: capitalize;
+        margin-left: 0;
+        &.active {
+            background-color: transparent;
+            color: #fff;
+            &:hover {
+                background-color: initial;
+            }
+        }
+        &:last-of-type {
+            margin: 0;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    main .title {
+        font-size: 0.8em;
     }
 }
