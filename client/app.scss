@@ -2,3 +2,6 @@
 @import './cardList/cardList';
 @import './cardList/timeline/timeline';
 @import './newUsecase/newCase';
+*:focus {
+    outline: none;
+}

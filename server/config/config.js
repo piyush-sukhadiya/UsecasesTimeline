@@ -8,6 +8,7 @@ module.exports = {
     port: 9001,
     ip: '0.0.0.0',
     mongo: {
+        // MongoDB URL
         uri: 'mongodb://localhost/usecaseTimeline',
         options: {
 
